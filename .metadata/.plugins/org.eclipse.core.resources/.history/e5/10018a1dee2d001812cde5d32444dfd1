@@ -1,0 +1,33 @@
+package parte1;
+import java.awt.*;
+import javax.swing.*;
+
+public class ControlesAvanzadosComentarios extends JFrame {
+
+	public ControlesAvanzadosComentarios () {
+		super("Comentarios");
+		setSize(400,200);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setLayout (new FlowLayout ());
+		JTextArea txtr1 = new JTextArea(100,800);
+		txtr1.setLineWrap(true);
+		txtr1.setWrapStyleWord(true);
+		
+		JScrollPane scrPanel = new JScrollPane(txtr1);
+		scrPanel.setPreferredSize(new Dimension(290,150));
+		
+		
+		
+		add(new JLabel("Deja un comentario"));
+		add(scrPanel);
+		
+		
+		setVisible(true);
+	}
+	
+	public static void main(String[] args) {
+		ControlesAvanzadosComentarios ventana = new ControlesAvanzadosComentarios();
+
+	}
+
+}

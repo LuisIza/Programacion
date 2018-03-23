@@ -1,0 +1,40 @@
+
+package parte1;
+import java.awt.*;
+import javax.swing.*;
+
+public class ControlesAvanzadosSuscripcion extends JFrame {
+
+	public ControlesAvanzadosSuscripcion () {
+		super("Suscripción");
+		setSize(250,300);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setLayout (new FlowLayout ());
+		
+		JLabel lblNombre = new JLabel("Nombre");
+		JTextField txtNombre = new JTextField(20);
+		JLabel lblEmail = new JLabel("Email");
+		JTextField txtEmail = new JTextField(20);
+		JLabel lblMotivo = new JLabel("Motivo por el que te suscribes");
+		JTextArea txtMotivo = new JTextArea(7,20);
+		//txtMotivo.setBorder(border);
+		
+		
+		
+		
+		add(lblNombre);
+		add(txtNombre);
+		add(lblEmail);
+		add(txtEmail);
+		add(lblMotivo);
+		add(txtMotivo);
+		
+		setVisible(true);
+	}
+	
+	public static void main(String[] args) {
+		ControlesAvanzadosSuscripcion ventana = new ControlesAvanzadosSuscripcion();
+
+	}
+
+}

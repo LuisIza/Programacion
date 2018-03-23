@@ -1,0 +1,31 @@
+/**
+ * 
+ */
+package salario;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+/**
+ * @author horabaixa
+ *
+ */
+public class Empleadotest1 {
+
+	@Test
+	public void test() {
+		fail("Not yet implemented");
+	}
+	@Test
+	public void testCSN() {
+		//fail("Not yet implemented");
+		
+		double valorReal = Empleado.CSN(2000);
+		double valorEsperado = 1640;
+		
+		assertEquals (valorEsperado,valorReal,0.001);
+	}
+	
+
+}

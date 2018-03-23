@@ -1,0 +1,33 @@
+
+package parte1;
+import java.awt.*;
+import javax.swing.*;
+
+import org.pushingpixels.substance.api.SubstanceLookAndFeel;
+
+import org.jvnet.substance.SubstanceLookAndFeel;
+
+public class Pruebas extends JFrame {
+
+	public Pruebas () {
+		super("Titulo");
+		setSize(300,200);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setLayout (new FlowLayout (FlowLayout.LEFT));
+		
+		
+		setDefaultLookAndFeelDecorated(true);
+		SubstanceLookAndFeel.setSkin(”org.jvnet.substance.skin.SaharaSkin”);
+		
+		
+		
+		
+		setVisible(true);
+	}
+	
+	public static void main(String[] args) {
+		Pruebas ventana = new Pruebas();
+
+	}
+
+}

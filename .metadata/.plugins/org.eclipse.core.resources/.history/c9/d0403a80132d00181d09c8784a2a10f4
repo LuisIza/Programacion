@@ -1,0 +1,23 @@
+package entidades;
+
+public abstract class  Entidad {
+	private int id;
+	private String nombre;
+	protected Direccion direccion;
+	private String telefono;
+	private String email;
+	
+	public Entidad(int id, String nombre, Direccion direccion, String telefono, String email) {
+		this.id = id;
+		this.nombre = nombre;
+		this.direccion = direccion;
+		this.telefono = telefono;
+		this.email = email;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	
+}

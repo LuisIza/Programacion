@@ -1,0 +1,5 @@
+1521815766634	Rename package 'refactoringSample.exempleRefactoringComplert'
+1521818137878	Extract method 'getAmount'
+1521819050424	Inline method 'moreThanFiveLateDeliveries'
+1521821090550	Extract method 'baseprice2'
+1521821107792	Inline local variable 'basePrice'
