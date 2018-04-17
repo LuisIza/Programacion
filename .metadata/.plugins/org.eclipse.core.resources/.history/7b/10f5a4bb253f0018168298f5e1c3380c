@@ -1,0 +1,10 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+		int num = 8;
+		System.out.println("es primo " + num + "?" + Calculos.esPrimo(num));
+
+	}
+
+}

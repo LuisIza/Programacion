@@ -1,0 +1,29 @@
+
+package parte3;
+import java.awt.*;
+import javax.swing.*;
+
+public class Ejemplo02ItemListener extends JFrame {
+
+	public Ejemplo02ItemListener () {
+		super("Peliculas y actores");
+		setSize(300,200);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setLayout (new FlowLayout (FlowLayout.LEFT));
+		
+		String []pelis = {"Harry Potter","Matriz","Mad max","Malditos bastardos"};
+		JComboBox<String> cmbPeliculas = new JComboBox<>(pelis);
+		
+		add(cmbPeliculas);
+		
+		
+		
+		setVisible(true);
+	}
+	
+	public static void main(String[] args) {
+		Ejemplo02ItemListener ventana = new Ejemplo02ItemListener();
+
+	}
+
+}

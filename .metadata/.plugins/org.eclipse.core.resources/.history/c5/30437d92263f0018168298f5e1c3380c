@@ -1,0 +1,35 @@
+
+public class Calculos {
+	public int num1;
+	public int num2;
+	
+	
+	
+	public static boolean esPrimo (int numero) {
+		
+		int contador= 2;
+		boolean primo = true;
+		while (primo && contador !=numero) {
+			if (numero % contador ==0) 
+				primo = false;
+			contador ++;
+					
+		}
+		if (primo) {
+			System.out.println("El numero " + numero + "es Primo");
+		}
+		
+		return primo;
+	}
+	
+	
+	public int cuentaPrimos (int numero) {
+		int total = 0;
+		while (numero >1)
+			esPrimo(numero);
+		numero --;
+		total++;
+		return total;
+	}
+
+}

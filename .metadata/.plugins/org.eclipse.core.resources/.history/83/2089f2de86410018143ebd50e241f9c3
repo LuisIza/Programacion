@@ -1,0 +1,28 @@
+
+package parte3;
+import java.awt.*;
+import javax.swing.*;
+
+public class Ejemplo01 extends JFrame {
+
+	public Ejemplo01 () {
+		super("Titulo");
+		setSize(300,200);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setLayout (new FlowLayout (FlowLayout.LEFT));
+		
+		
+		
+		
+		
+		
+		
+		setVisible(true);
+	}
+	
+	public static void main(String[] args) {
+		Ejemplo01 ventana = new Ejemplo01();
+
+	}
+
+}

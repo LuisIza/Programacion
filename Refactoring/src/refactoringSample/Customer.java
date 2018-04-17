@@ -66,6 +66,11 @@ class Customer {
 		return result;
 	}
 	
+	
+	//////////////////////////////////////////////////////////////////////////////////////////////
+	//////////////////////////////////////////////////////////////////////////////////////////////
+	
+	// 1. EXTRACT METHOD
 	public void printAmount () {
 		int amount = 0 ;
 		
@@ -86,29 +91,52 @@ class Customer {
 		
 	}
 	
+	// 2. INLINE METOD
+	/*
+	 * int getRating() {
+    	return moreThanFiveLateDeliveries() ? 2 : 1;
+  		}
+  		boolean moreThanFiveLateDeliveries() {
+    	return numberOfLateDeliveries > 5;
+  		}
+		}*/
 	
 	 int getRating() {
 		    return numberOfLateDeliveries > 5 ? 2 : 1;
 	 }
 	 
 	 
-	 
-	 
-//	 boolean hasDiscount(Order order) {
-//		  double basePrice = order.basePrice();
-//		  return basePrice > 1000;
-//	}
+	 // 3. INLINE TEMP
+	 /*
+	  * boolean hasDiscount(Order order) {
+  		double basePrice = order.basePrice();
+  		return basePrice > 1000;
+		}
+	  */
+	 boolean hasDiscount(Order order) {
+		return order.basePrice() > 1000;
+	}
 	 
 	 
 	 public int suma (int n, int n2) {
-		 int suma = n + n2;
-		 return suma;
+		return n + n2;
 	 }
 	
 	 
+	 // 4. REPLACE TEMP
+	/* 
+	 * 	double calculateTotal() {
+		double basePrice = quantity * itemPrice;
+		if (basePrice > 1000) {
+		    return basePrice * 0.95;
+		  }
+		  else {
+		    return basePrice * 0.98;
+		  }
+		}*/
 	 
 	 double calculateTotal() {
-		 int quantity=0;
+		int quantity=0;
 		int itemPrice=0;
 		final double basePrice = baseprice2(quantity, itemPrice);
 		  if (basePrice < 1000) {
@@ -122,6 +150,53 @@ class Customer {
 	private double baseprice2(int quantity, int itemPrice) {
 		return (double) (quantity * itemPrice);
 	}
+	
+	// 5. Introduce Explaining Variable
+	
+	/*private boolean wasInitialized() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+	 void renderBanner() {
+  		String platform = null;
+		String browser = null;
+		int resize = 0;
+		if ((platform.toUpperCase().indexOf("MAC") > -1) &&
+       (browser.toUpperCase().indexOf("IE") > -1) &&
+        wasInitialized() && resize > 0 )
+  		{
+    	// do something
+  		}
+		}
+*/
+	
+	private boolean wasInitialized() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+	 void renderBanner() {
+  		String platform = null;
+		String browser = null;
+		int resize = 0;
+		final boolean isMacos = platform.toUpperCase().indexOf("MAC") > -1;
+		final boolean isIEBrowser = browser.toUpperCase().indexOf("IE") > -1;
+		final boolean wasResized = wasInitialized() && resize > 0;
+		if (isMacos &&       isIEBrowser &&        wasResized )	{
+			
+    	// do something
+  		}
+		}
+
+	// 6. Remove Assignments to Parameters
+	 
+	public void discount(final int inputVal, int quantity) {
+		  int result = inputVal;
+		if (result > 50) {
+		    result -= 2;
+		  }
+		  
+		}
+	 	
 	
 	
 }

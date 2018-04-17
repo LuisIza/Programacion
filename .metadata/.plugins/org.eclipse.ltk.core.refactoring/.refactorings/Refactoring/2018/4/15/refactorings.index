@@ -1,0 +1,6 @@
+1523367697747	Inline local variable 'suma'
+1523368072569	Inline local variable 'basePrice'
+1523368576932	Extract local variable 'isMacos'
+1523368629690	Extract local variable 'isIEBrowser'
+1523368666367	Extract local variable 'wasResized'
+1523369805734	Extract local variable 'result'

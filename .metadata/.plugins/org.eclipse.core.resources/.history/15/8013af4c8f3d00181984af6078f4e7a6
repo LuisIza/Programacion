@@ -1,0 +1,40 @@
+
+package parte2;
+import java.awt.*;
+import javax.swing.*;
+
+public class Ejemplo08 extends JFrame {
+
+	public Ejemplo08 () {
+		super("Titulo");
+		setSize(300,300);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setLayout (new FlowLayout (FlowLayout.LEFT));
+		
+
+		JPanel pnlIzq = new JPanel();
+		pnlIzq.setPreferredSize(new Dimension(140, 100));
+		pnlIzq.setBorder(BorderFactory.createLineBorder(Color.RED));
+		
+		JPanel pnlDrch = new JPanel();
+		pnlDrch.setPreferredSize(new Dimension(140, 100));
+		pnlDrch.setBorder(BorderFactory.createLineBorder(Color.BLUE,5,true));
+		
+		JPanel pnlAbajo = new JPanel();
+		pnlAbajo.setPreferredSize(new Dimension(280, 80));
+		pnlAbajo.setBorder(BorderFactory.createLineBorder(Color.BLUE,5,true));
+		
+		add(pnlIzq);
+		add(pnlDrch);
+		
+		
+		
+		setVisible(true);
+	}
+	
+	public static void main(String[] args) {
+		Ejemplo08 ventana = new Ejemplo08();
+
+	}
+
+}

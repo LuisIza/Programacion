@@ -1,0 +1,29 @@
+
+package parte2;
+import java.awt.*;
+import javax.swing.*;
+
+public class Ejemplo09TitleBorder extends JFrame {
+
+	public Ejemplo09TitleBorder () {
+		super("Titulo");
+		setSize(300,200);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setLayout (new FlowLayout (FlowLayout.LEFT));
+		
+		JPanel pnlTitulo = new JPanel();
+		pnlTitulo.setBorder(BorderFactory.createTitledBorder("Datos de usuario"));
+		pnlTitulo.setPreferredSize(new Dimension(280, 180));
+		
+		
+		
+		add(pnlTitulo);
+		setVisible(true);
+	}
+	
+	public static void main(String[] args) {
+		Ejemplo09TitleBorder ventana = new Ejemplo09TitleBorder();
+
+	}
+
+}

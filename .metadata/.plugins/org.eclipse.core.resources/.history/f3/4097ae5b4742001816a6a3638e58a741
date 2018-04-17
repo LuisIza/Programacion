@@ -1,0 +1,116 @@
+
+import static java.lang.System.*;
+import java.util.Scanner;
+
+
+public class Algoritmos {
+	
+	// Debugear los siguientes algoritmos para encontrar el / los errores
+	
+	public void cuantosDigitos () {
+		int n, c = 0;
+		//inicio
+		System.out.println("Dado un numero, determinar cuantos digitos tiene");
+		Scanner teclado = new Scanner(System.in);
+		System.out.println("");
+		System.out.println("Ingrese numero: ");
+		
+		n = teclado.nextInt();
+		System.out.println("parada 2222");
+		while(n >= 0){
+			n = n/10;
+			c+=1;
+		}
+		
+		teclado.close();
+		
+		//salida
+		System.out.println("");
+		System.out.println("El numero de digitos de es " + c);
+		
+	}
+	
+	public void totalMultp5 () {
+		//variables
+		int n, i, c = 0;
+		
+		//entrada
+		System.out.println("Obtiene la cantidad de los primeros N numeros multiplos de 5");
+		Scanner teclado = new Scanner(System.in);
+		System.out.println("");
+		System.out.println("Ingrese numero: ");
+		n = teclado.nextInt();
+
+		//proceso
+		i = 1;
+		while(i < n){
+			if(i % 5 == 0){
+				c+=1;
+				out.println ("Digito: " + i);
+			}
+			i++;
+		}
+		
+		teclado.close();
+		
+		//salida
+		System.out.println("");
+		System.out.println("la cantidad de numereos multiplos de 5 es: " + c);
+
+	}
+	
+	public void totalPares () {
+		//variables
+		int ini, fin, i, c = 0;
+		
+		//entrada
+		System.out.println("Dado un rango de numeros enteros, obtener la cantidad de numeros pares que contiene, incluidos los el inicial y el final");
+		
+		Scanner teclado = new Scanner(System.in);
+		System.out.println("");
+		
+		System.out.println("Ingrese numero inicial");
+		ini = teclado.nextInt();
+		
+		System.out.println("Ingrese numero final");
+		fin = teclado.nextInt();
+		
+		//proceso
+		i = ini + 1;
+		
+		while(i < fin){
+			if(i % 2 == 0){
+				c+=1;
+			}
+			out.println("Número par: " + i);
+			i++;
+		}
+		
+		teclado.close();
+		
+		//salida
+		System.out.println("");
+		System.out.println("La cantidad de numeros pares que se encuentra entre " + ini + " y " + fin + " es: "+c);
+	}
+	
+	public void sumaNnaturales () {
+		
+		int n, i, s = 0;
+		
+		System.out.println("*Obtener la suma de los N numeros naturales positivos*");
+		System.out.println("Ingreseumero: ");
+		Scanner teclado = new Scanner(System.in);
+		n = teclado.nextInt();
+		i = 1;
+		
+		while( i <= n-1) {
+			s = s + i;
+			i = i - 1;
+		}
+		
+		teclado.close();
+		
+		System.out.println("la de los "+n+"numeros es "+s);
+	}
+	
+}
