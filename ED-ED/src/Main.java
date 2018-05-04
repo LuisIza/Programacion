@@ -1,6 +1,8 @@
 
+
 public class Main {
 
+	
 	public static void main(String[] args) {
 		int num = 8;
 		int num2= 23564;
@@ -10,9 +12,9 @@ public class Main {
 		
 		//System.out.println("Cuenta primos " + Calculos.cuentaPrimos(num));
 		
-		Algoritmos alg = new Algoritmos();
+		//Algoritmos alg = new Algoritmos();
 		
-		alg.sumaNnaturales();
+		//alg.sumaNnaturales();
 
 	}
 
