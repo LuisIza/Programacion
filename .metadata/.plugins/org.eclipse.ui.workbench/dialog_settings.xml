@@ -17,9 +17,13 @@
 		</list>
 	</section>
 	<section name="NewWizardAction">
-		<item value="org.eclipse.papyrus.uml.diagram.wizards.createproject" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
+		<item value="org.eclipse.papyrus.examples.user.qvto.wizard" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
 		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
 			<item value="org.eclipse.papyrus.wizards.category"/>
+			<item value="org.eclipse.pde.PDE"/>
+			<item value="org.eclipse.ui.Other"/>
+			<item value="org.eclipse.ui.Examples"/>
+			<item value="org.eclipse.ui.Examples/org.eclipse.papyrus.examples"/>
 		</list>
 	</section>
 	<section name="ImportExportAction">

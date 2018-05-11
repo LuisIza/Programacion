@@ -1,7 +1,5 @@
 import java.io.*;
 public class Ejemplo03LeerBuffer {
-
-	
 	
 	public static void main(String[] args) {
 		
