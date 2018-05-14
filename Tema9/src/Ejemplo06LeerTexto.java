@@ -10,7 +10,6 @@ public class Ejemplo06LeerTexto {
 			FileReader archivo = new FileReader(NOMBRE_FILE);
 			BufferedReader buffer = new BufferedReader(archivo);
 			
-			
 			boolean eof = false;
 			String linea;
 			
