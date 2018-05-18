@@ -17,14 +17,12 @@ public class Ejemplo14 extends JFrame {
 		
 		JMenu menu = new JMenu ("Archivo");
 		JMenuItem mAbrir = new JMenuItem("Abrir");
-		JMenuItem mArchivo = new JMenuItem("Abrir");
-		JMenuItem mArchiv = new JMenuItem("Abrir");
 		menu.add(mAbrir);
 		JMenuBar barra = new JMenuBar();
 		barra.add(menu);
 		
 		
-		add(barra);
+		setJMenuBar(barra);
 		
 		setVisible(true);
 	}
