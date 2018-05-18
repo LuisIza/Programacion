@@ -8,7 +8,7 @@ import javax.swing.*;
  *
  */
 public class Ejemplo14 extends JFrame {
-
+		
 	public Ejemplo14 () {
 		super("Lector");
 		setSize(500,300);
@@ -20,6 +20,10 @@ public class Ejemplo14 extends JFrame {
 		menu.add(mAbrir);
 		JMenuBar barra = new JMenuBar();
 		barra.add(menu);
+		JTextArea txtVisor = new JTextArea();
+		JScrollPane srcTxt = new JScrollPane();
+		
+		srcTxt.add(txtVisor);
 		
 		
 		setJMenuBar(barra);
