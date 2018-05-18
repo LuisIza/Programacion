@@ -5,7 +5,11 @@ import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 
 import javax.swing.BorderFactory;
 import javax.swing.DefaultListModel;
@@ -39,17 +43,26 @@ public class HallOfFame extends JFrame{
 		JLabel lblTitulo = new JLabel("*** Hall of Fame ***");
 		modelo = new DefaultListModel<>();
 		lisVisor = new JList<>(modelo);
-		lisVisor.setPreferredSize(new Dimension(280,380));
 		lisVisor.setBorder(BorderFactory.createLineBorder(Color.black));	
+		JScrollPane srcVisor = new JScrollPane(lisVisor);
+		srcVisor.setPreferredSize(new Dimension(280,380));
 		
 		JButton btNuevo = new JButton("Nuevo");
 		btNuevo.addActionListener(new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				String nombre = JOptionPane.showInputDialog(null,"¿Nombre del jugador?");
-				String puntuacion = JOptionPane.showInputDialog(null,"¿Puntuacion del jugador?");
+				JOptionPane option = new JOptionPane();
+				
+				String nombre = option.showInputDialog(null,"¿Nombre del jugador?");
+				
+				
+				String puntuacion = JOptionPane.showInputDialog(null,"¿Puntuacion del jugador?");	
+				if (nombre == null || puntuacion == null) {
+					JOptionPane.showMessageDialog(null, "No se ha guardado ningun jugador","Jugador", JOptionPane.INFORMATION_MESSAGE);
+				}else {
 				addJugador(nombre,puntuacion);
+				}
 			}
 		});
 		
@@ -75,7 +88,7 @@ public class HallOfFame extends JFrame{
 		});
 		
 		add(lblTitulo);
-		add(lisVisor);
+		add(srcVisor);
 		add(btNuevo);
 		add(btBorrar);
 	
@@ -89,9 +102,6 @@ public class HallOfFame extends JFrame{
 		leeJugadores();	
 		
 	}
-	
-	
-	
 	
 	public static void  addJugador(String nombre, String puntuacion) {
 		
