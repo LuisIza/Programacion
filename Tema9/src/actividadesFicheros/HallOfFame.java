@@ -33,7 +33,6 @@ public class HallOfFame extends JFrame{
 	private static JList<String> lisVisor;
 	private static DefaultListModel modelo ;
 	
-
 	public  HallOfFame () {
 		super("Puntuaciones");
 		setSize(300,450);
@@ -56,7 +55,6 @@ public class HallOfFame extends JFrame{
 				
 				String nombre = option.showInputDialog(null,"¿Nombre del jugador?");
 				
-				
 				String puntuacion = JOptionPane.showInputDialog(null,"¿Puntuacion del jugador?");	
 				if (nombre == null || puntuacion == null) {
 					JOptionPane.showMessageDialog(null, "No se ha guardado ningun jugador","Jugador", JOptionPane.INFORMATION_MESSAGE);
@@ -77,13 +75,7 @@ public class HallOfFame extends JFrame{
 								
 				if (borrar == 0) {
 					borraArchivo();
-					if (modelo.getSize()>0) {
-						modelo.removeAllElements();
-					}
-					
-				}else {
-					JOptionPane.showMessageDialog(null, "Opción cancelada, No se ha borrado ningun dato");
-				}
+					leeJugadores();	}
 			}
 		});
 		
@@ -129,6 +121,7 @@ public class HallOfFame extends JFrame{
 			
 			boolean eof = false;
 			String linea;
+			modelo.clear();
 			
 			while (!eof) {
 				linea = buffer.readLine();
@@ -139,7 +132,6 @@ public class HallOfFame extends JFrame{
 					if (linea.length()>0) {
 					String textos[] = linea.split(",");
 						modelo.addElement(textos[0] + " ··· " + textos[1]);}
-					
 				}
 			
 			}
